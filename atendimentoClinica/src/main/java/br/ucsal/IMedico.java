@@ -1,4 +1,4 @@
-package atendimentoClinica;
+package br.ucsal;
 
 import java.util.List;
 
