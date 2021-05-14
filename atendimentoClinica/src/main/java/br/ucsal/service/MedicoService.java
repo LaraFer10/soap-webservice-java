@@ -1,5 +1,6 @@
 package br.ucsal.service;
 
+import java.util.List;
 import java.util.Map;
 
 import br.ucsal.model.Especialidade;
@@ -7,6 +8,7 @@ import br.ucsal.model.Medico;
 
 public class MedicoService {
 
+	static List<Medico> listaMedico;
 	
 	public boolean incluir(String nome, String crm, Long especialidade) {
 		Medico medico = new Medico();
@@ -16,11 +18,18 @@ public class MedicoService {
 		medico.setNome(nome);
 		medico.setCrm(crm);
 		medico.setEspecialidade(esp);
-		return false;
+		
+		if(listasMedicos(medico) != null)
+			return true;
+		else
+			return false;
 	}
 	
-	public Map<Integer, Medico> listasMedicos(Medico medico) {
-		return null;
+	public List<Medico> listasMedicos(Medico medico) {
+		if(listaMedico.add(medico))
+			return listaMedico;
+		else
+			return null;
 	}
 
 }
