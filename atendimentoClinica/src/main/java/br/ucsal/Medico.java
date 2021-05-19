@@ -15,8 +15,7 @@ public class Medico implements IMedico{
 	}
 
 	public boolean excluirMedico(String crm) {
-		// TODO Auto-generated method stub
-		return false;
+		return (new MedicoService()).excluir(crm);
 	}
 
 	public String obterNomeMedico(String crm) {
