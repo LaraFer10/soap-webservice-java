@@ -49,6 +49,7 @@ public class MedicoService {
 		return "";
 	}
 	
+	@SuppressWarnings("null")
 	public List<Medico> listaMedicosPorEspecialidade(Especialidade especialidade) {
 		 List<Medico> listaMedicosPorEspecialidade = null;
 

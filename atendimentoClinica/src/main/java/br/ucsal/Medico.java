@@ -4,6 +4,8 @@ import java.util.List;
 
 import javax.jws.WebService;
 
+import br.ucsal.model.Especialidade;
+import br.ucsal.model.Medico;
 import br.ucsal.service.MedicoService;
 @WebService(endpointInterface = "br.ucsal.IMedico")
 public class Medico implements IMedico{
@@ -34,5 +36,10 @@ public class Medico implements IMedico{
 	public String obterEspecialidadeMedico(String crm) {
 		return (new MedicoService()).obterEspecialidadePorCRM(crm);
 	}
+	
+	public List<br.ucsal.model.Medico> listaMedicosPorEspecialidade(Especialidade especialidade) {
+		return (new MedicoService()).listaMedicosPorEspecialidade(especialidade);
+	}
+	
 
 }
