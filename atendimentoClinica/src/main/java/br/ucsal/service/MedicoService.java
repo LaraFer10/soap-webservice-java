@@ -1,7 +1,6 @@
 package br.ucsal.service;
 
 import java.util.List;
-import java.util.Map;
 
 import br.ucsal.model.Especialidade;
 import br.ucsal.model.Medico;
@@ -48,6 +47,17 @@ public class MedicoService {
 			}
 		}
 		return "";
+	}
+	
+	public List<Medico> listaMedicosPorEspecialidade(Especialidade especialidade) {
+		 List<Medico> listaMedicosPorEspecialidade = null;
+
+		   for (Medico medico : this.listaMedico) {
+		        if (medico.getEspecialidade().getDescricao() == especialidade.getDescricao()) {
+		        	listaMedicosPorEspecialidade.add(medico);
+		        }
+		    }
+		return listaMedicosPorEspecialidade;
 	}
 
 	public Boolean excluir(String crm) {
