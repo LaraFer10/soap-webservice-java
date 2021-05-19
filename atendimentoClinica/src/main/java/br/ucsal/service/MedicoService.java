@@ -50,15 +50,15 @@ public class MedicoService {
 	}
 	
 	@SuppressWarnings("null")
-	public List<Medico> listaMedicosPorEspecialidade(Especialidade especialidade) {
-		 List<Medico> listaMedicosPorEspecialidade = null;
+	public List<String> listaMedicosPorEspecialidade(Especialidade especialidade) {
+		 List<String> nomesMedicosPorEspecialidade = null;
 
 		   for (Medico medico : this.listaMedico) {
 		        if (medico.getEspecialidade().getDescricao() == especialidade.getDescricao()) {
-		        	listaMedicosPorEspecialidade.add(medico);
+		        	nomesMedicosPorEspecialidade.add(medico.getNome());
 		        }
 		    }
-		return listaMedicosPorEspecialidade;
+		return nomesMedicosPorEspecialidade;
 	}
 
 	public Boolean excluir(String crm) {

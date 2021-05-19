@@ -19,5 +19,5 @@ public interface IMedico {
 	@WebMethod String obterCRMMedico(String nome);
 	@WebMethod String obterEspecialidadeMedico(String crm);
 	@WebMethod List<String> listarNomeMedico(String especialidade);
-	@WebMethod List<br.ucsal.model.Medico> listaMedicosPorEspecialidade(Especialidade especialidade);
+	@WebMethod List<String> listaMedicosPorEspecialidade(Especialidade especialidade);
 }
