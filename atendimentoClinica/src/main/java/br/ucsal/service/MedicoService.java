@@ -40,5 +40,14 @@ public class MedicoService {
 		}
 		return "";
 	}
+	
+	public String obterEspecialidadePorCRM(String crm) {
+		for (Medico medico : listaMedico) {
+			if(medico.getCrm().equals(crm)) {
+				return medico.getEspecialidade().getDescricao();
+			}
+		}
+		return "";
+	}
 
 }

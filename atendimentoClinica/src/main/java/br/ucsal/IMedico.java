@@ -15,5 +15,6 @@ public interface IMedico {
 	@WebMethod boolean excluirMedico(String crm);
 	@WebMethod String obterNomeMedico(String crm);
 	@WebMethod String obterCRMMedico(String nome);
+	@WebMethod String obterEspecialidadeMedico(String crm);
 	@WebMethod List<String> listarNomeMedico(String especialidade);
 }

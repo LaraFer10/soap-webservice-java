@@ -31,4 +31,8 @@ public class Medico implements IMedico{
 		return null;
 	}
 
+	public String obterEspecialidadeMedico(String crm) {
+		return (new MedicoService()).obterEspecialidadePorCRM(crm);
+	}
+
 }
