@@ -31,5 +31,14 @@ public class MedicoService {
 		else
 			return null;
 	}
+	
+	public String obterNomePorCRM(String crm) {
+		for (Medico medico : listaMedico) {
+			if(medico.getCrm().equals(crm)) {
+				return medico.getNome();
+			}
+		}
+		return "";
+	}
 
 }

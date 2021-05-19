@@ -18,8 +18,7 @@ public class Medico implements IMedico{
 	}
 
 	public String obterNomeMedico(String crm) {
-		// TODO Auto-generated method stub
-		return null;
+		return (new MedicoService()).obterNomePorCRM(crm);
 	}
 
 	public String obterCRMMedico(String nome) {
