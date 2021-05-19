@@ -5,7 +5,6 @@ import java.util.List;
 import javax.jws.WebService;
 
 import br.ucsal.model.Especialidade;
-import br.ucsal.model.Medico;
 import br.ucsal.service.MedicoService;
 @WebService(endpointInterface = "br.ucsal.IMedico")
 public class Medico implements IMedico{
@@ -23,12 +22,10 @@ public class Medico implements IMedico{
 	}
 
 	public String obterCRMMedico(String nome) {
-		// TODO Auto-generated method stub
-		return null;
+		return (new MedicoService().obterCRMPorNome(nome));
 	}
 
 	public List<String> listarNomeMedico(String especialidade) {
-		// TODO Auto-generated method stub
 		return null;
 	}
 

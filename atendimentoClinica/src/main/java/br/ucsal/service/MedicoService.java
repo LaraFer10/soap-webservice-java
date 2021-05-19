@@ -69,5 +69,14 @@ public class MedicoService {
 		}
 		return false;
 	}
+	
+	public String obterCRMPorNome(String nome) {
+		for (Medico medico : listaMedico) {
+			if(medico.getNome().equals(nome)) {
+				return medico.getCrm();
+			}
+		}
+		return "";
+	}
 
 }
