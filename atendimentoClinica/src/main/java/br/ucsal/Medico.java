@@ -33,7 +33,7 @@ public class Medico implements IMedico{
 		return (new MedicoService()).obterEspecialidadePorCRM(crm);
 	}
 	
-	public List<br.ucsal.model.Medico> listaMedicosPorEspecialidade(Especialidade especialidade) {
+	public List<String> listaMedicosPorEspecialidade(Especialidade especialidade) {
 		return (new MedicoService()).listaMedicosPorEspecialidade(especialidade);
 	}
 	
