@@ -15,6 +15,6 @@ public class Especialidade {
 	}
 	public void setDescricao(String descricao) {
 		this.descricao = descricao;
-	} a
+	}
 	
 }
